@@ -4,9 +4,9 @@
 shift res from pixels to bits
 
 ## dependencies
-numpy
+[numpy](http://www.numpy.org/)
 
-Pillow
+[Pillow](https://python-pillow.org/)
 
 ## use
 [img] - path to image
