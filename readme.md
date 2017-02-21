@@ -1,7 +1,8 @@
 # resdownbitup
 
 ## info
-shift res from pixels to bits
+Shifts resolution from pixels to bits.
+This method dose not increase dynamic range.
 
 ## dependencies
 numpy
