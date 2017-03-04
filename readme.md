@@ -8,11 +8,11 @@ This method dose not increase dynamic range.
 
 
 ## dependencies
-numpy
+[numpy](http://www.numpy.org/)
 
-Pillow
+[Pillow](https://python-pillow.org/)
 
-pypng
+[pypng](https://pypi.python.org/pypi/pypng)
 
 
 ## use
