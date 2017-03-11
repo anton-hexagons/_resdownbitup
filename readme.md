@@ -6,6 +6,7 @@ Shifts resolution from pixels to bits.
 
 This method dose not increase dynamic range.
 
+Example: 4K 8bit to 1080p 10bit
 
 ## dependencies
 [numpy](http://www.numpy.org/)
