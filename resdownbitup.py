@@ -16,6 +16,9 @@ if len(sys.argv) - 1 not in [2, 3]:
 	exit()
 
 img_in_path = sys.argv[1]
+if " " in img_in_path:
+	print("spaces in path not supported")
+	exit()
 res_shift_steps = int(sys.argv[2])
 if res_shift_steps == 0:
 	print('arg: [res_shift_steps], can not be zero')
@@ -73,8 +76,8 @@ for pix_y in range(img_out_arr.shape[0]):
 					in_pix_y = pix_x * res_pow + subpix_x + img_out_arr_crop_offset_x
 					pix_color = img_in_arr[in_pix_x, in_pix_y, color]
 					# hot spot fix
-					if pix_color == 255:
-						pix_color = 250
+					# if pix_color == 255:
+					# 	pix_color = 250
 					pix[color] += pix_color
 		img_out_arr[pix_y, pix_x] = pix
 
@@ -82,7 +85,7 @@ print('render done')
 
 
 img_out_arr = img_out_arr / (pow(res_pow, 2) * 255)
-print(img_out_arr)
+# print(img_out_arr)
 
 # img_out_arr = img_out_arr.astype(int_type)
 
@@ -106,7 +109,7 @@ img_out_path = img_in_path.split('.')[0] + '__resdownbitup_' + str(res_shift_ste
 
 # Convert y to 16 bit unsigned integers.
 img_out_arr_16 = (65535 * ((img_out_arr - img_out_arr.max()) / img_out_arr.ptp())).astype(np.uint16)
-print(img_out_arr_16)
+# print(img_out_arr_16)
 
 # Use pypng to write z as a color PNG.
 with open(img_out_path, 'wb') as file:
