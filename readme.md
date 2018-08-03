@@ -2,9 +2,11 @@
 
 
 ## info
-Shifts resolution from pixels to bits.
+Result: Shifts resolution from pixels to bits.
 
-This method dose not increase dynamic range.
+HDR: This script dose not increase dynamic range, it increase dynamic resolution.
+
+Pros / Cons: By sacrificing pixel size resolution, we gain pixel bit depth resolution.
 
 Example: 4K 8bit to 1080p 10bit
 
