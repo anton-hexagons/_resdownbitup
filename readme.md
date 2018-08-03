@@ -19,6 +19,8 @@ Example: 4K 8bit to 1080p 10bit
 
 
 ## use
+python resdownbitup.py image.jpg 4
+
 [img] - path to image
 
 [res_shift_steps] - image res is halfed and raised by 2 bits per step
